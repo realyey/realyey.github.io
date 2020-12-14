@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: arial;
+      padding: 10px;
+      background: #f1f1f1;
+      line-height: 180%;
+    }
+
+    a {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    /* Header/Blog title */
+    .header {
+      padding: 30px;
+      text-align: center;
+      background: white;
+    }
+
+    .header h1 {
+      font-size: 50px;
+    }
+
+    /* Style the top navigation bar */
+    .topnav {
+      overflow: hidden; /* visible,scroll,auto; */
+      background-color: #333;
+    }
+
+    /* Create two unequal columns that floats next to each other */
+    /* Style the topnav Links */
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    /* Change color on hover */
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .selected {
+      background-color: #000;
+      color: #fff;
+    }
+
+    /* Left column */
+    .leftcolumn {
+      float: left;
+      width: 50%;
+    }
+
+    /* Right column */
+    .rightcolumn {
+      float: left;
+      width: 50%;
+      background-color: #f1f1f1;
+      padding-left: 20px;
+    }
+
+    /* Fake image */
+    .fakeimg {
+      background-color: #aaa;
+      width: 100%;
+      padding: 20px;
+    }
+
+    /* Add a card effect for articles */
+    .card {
+      background-color: white;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .card li {
+      list-style-type: decimal;
+      line-height: 180%;
+    }
+
+    /* Clear floats after the columns : 컬럼 다음에 float 해제 */
+    .row:after { /* before */
+      content:""; /* .row 다음에 contect "" 안에 있는 내용을 입력하시오. */
+      display: table;
+      clear: both;
+    }
+
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: #333;
+      color: #fff;
+      margin-top: 20px;
+    }
+
+    /* Responsive Layout - when the screen is less than 800px wide,
+    make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+      .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0%;
+      }
+    }
+
+    /* Responsive Layout - when the screen is less than 400px wide,
+    make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 400px) {
+      .topnav a {
+        float: none;
+        width: 100%;
+      }
+    }
+
+    </style>
+
+  </head>
+  <body>
+
+    <div class="header">
+      <a href="../index.html"><h1>REAL_YEY</h1></a>
+    </div>
+
+    <div class="topnav">
+      <a href="../index2.html">기획</a>
+      <a href="#"  class="selected">디자인</a>
+      <a href="../last/page1.html" style="float:right;">프로그래밍</a>
+    </div>
+
+    <div class="row">
+
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>DESIGN 1, ENNEAGRAM</h2>
+          <h5>Born on Oct 8, 1998</h5>
+          <img src="../img/3_1_1.png">
+          <p>일러스트를 활용해 애니어그램으로 자신을 표현했다.</p>
+        </div>
+        <div class="card">
+          <h2>DESIGN 2, ENNEAGRAM with Pic</h2>
+          <h5>Born on Oct 8, 1998</h5>
+          <img src="../img/3_1_2.png">
+          <p>포토샵과 사진을 활용해 애니어그램으로 자신을 표현했다.</p>
+        </div>
+        <div class="card">
+          <h2>DESIGN 3, CARD NEWS 2</h2>
+          <h5>Born on Oct 8, 1998</h5>
+          <img src="../img/3_1_3.png">
+          <p>폰트 헬베티카에 대한 카드뉴스를 제작했다.</p>
+        </div>
+      </div>
+
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>DRAWING 1, ILLUST</h2>
+          <h5>Oct 20, 2020</h5>
+          <img src="../img/3_2_1.png">
+          <p>데이먼스 이어 - josee! 를 주제로 그린 일러스트이다.</p>
+        </div>
+        <div class="card">
+          <h2>DRAWING 2, CARD NEWS</h2>
+          <h5>Dec 8, 2020</h5>
+          <img src="../img/3_2_2.png">
+          <p>최은영 작가의 소설 <쇼코의 미소>를 재해석해 제작한 카드 뉴스이다.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <p>Copyright 2020. REAL__YEY. All rights reserved.</p>
+    </div>
+
+  </body>
+</html>
