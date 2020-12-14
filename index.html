@@ -13,6 +13,7 @@
       font-family: arial;
       padding: 10px;
       background: #f1f1f1;
+      line-height: 180%;
     }
 
     /* Header/Blog title */
@@ -52,13 +53,13 @@
     /* Left column */
     .leftcolumn {
       float: left;
-      width: 75%;
+      width: 25%;
     }
 
     /* Right column */
     .rightcolumn {
       float: left;
-      width: 25%;
+      width: 75%;
       background-color: #f1f1f1;
       padding-left: 20px;
     }
@@ -77,6 +78,11 @@
       margin-top: 20px;
     }
 
+    .card li {
+      list-style-type: decimal;
+      line-height: 180%;
+    }
+
     /* Clear floats after the columns : 컬럼 다음에 float 해제 */
     .row:after { /* before */
       content:""; /* .row 다음에 contect "" 안에 있는 내용을 입력하시오. */
@@ -87,7 +93,8 @@
     .footer {
       padding: 20px;
       text-align: center;
-      background: #ddd;
+      background: #333;
+      color: #fff;
       margin-top: 20px;
     }
 
@@ -115,58 +122,63 @@
   <body>
 
     <div class="header">
-      <h1>睿珍; 예진</h1>
-      <p>Resize the browser window to see the effect.</p>
+      <h1>REAL_YEY</h1>
     </div>
 
     <div class="topnav">
-      <a href="#">2015</a>
-      <a href="#">2016</a>
-      <a href="#">2020</a>
-      <a href="#" style="float:right;">Link</a>
+      <a href="#">기획</a>
+      <a href="#">디자인</a>
+      <a href="#">프로그래밍</a>
+      <a href="#" style="float:right;">1학기 작업물</a>
     </div>
 
     <div class="row">
 
       <div class="leftcolumn">
         <div class="card">
-          <h2>TITLE HEADING</h2>
-          <h5>Title description, Dec7, 2017</h5>
-          <div class="fakeimg" style="height:200px;">Image</div>
-          <p>Some text..</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <h2>PROFILE</h2>
+          <h5>Born on Oct 8, 1998</h5>
+          <img src="./img/1_profile.png">
+          <p>황예진, 23세</p>
+          <p>계원예술대학교 디지털미디어디자인과 1학년에 재학 중이며, 2학년 세부 전공으로는 디자인을 선택했다. 현재 인천에서 거주하고 있다.</p>
         </div>
         <div class="card">
-          <h2>TITLE HEADING</h2>
-          <h5>Title description, Dec7, 2017</h5>
-          <div class="fakeimg" style="height:200px;">Image</div>
-          <p>Some text..</p>
-          <p>sLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <h2>HOBBY</h2>
+          <h5>Music / Book / etc..</h5>
+          <ul>
+            <li>음악 감상<br>다양한 장르의 음악을 듣는 것을 좋아한다</li>
+            <li>독서<br>책을 통해 상상력을 넓히는 과정을 즐긴다</li>
+            <li>영화 감상 / 산책 등</li>
+          </ul>
         </div>
       </div>
 
       <div class="rightcolumn">
         <div class="card">
-          <h2>About Me</h2>
-          <div class="fakeimg" style="height:100px;">Image</div>
-          <p>Some Text about me in culpa qui officia deserunt mollit anim..</p>
+          <h2>REAL_YEY?</h2>
+          <p><i><b>진짜</b>가 나타났다!</i> 의 그 진짜가 될, 디자이너 황예진</p>
+          <p>한자로 참 진(眞)을 사용하는 것은 아니지만, 말하고자 하는 바가 같아 REAL_YEY를 모토로 사용하고 있다.<br>
+          YE가 아니라 YEY인 이유는...... YEY가 조금 더 신나 보이니까?</p>
+          <p>실제 이름의 한자는 슬기 예(睿) 보배 진(珍)이다. 슬기로운 보배.</p>
         </div>
         <div class="card">
-          <h2>Popular Post</h2>
-          <div class="fakeimg"><p>Image</p></div>
-          <div class="fakeimg"><p>Image</p></div>
-          <div class="fakeimg"><p>Image</p></div>
+          <h2>POPULAR POST</h2>
+          <a href="index2.html"><img src="./img/1_1.png"></a>
+          <a href="index3.html"><img src="./img/1_1.png"></a>
+          <a href="index4.html"><img src="./img/1_1.png"></a>
         </div>
         <div class="card">
-          <h2>Follow Me</h2>
-          <p>Some Text..</p>
+          <h2>CONTACT</h2>
+          <p>E-mail: y900105o@naver.com<br>
+          Phone: 010-6812-1016<br>
+          Instagram: @real__yey</p>
         </div>
       </div>
 
     </div>
 
     <div class="footer">
-      <h2>footer</h2>
+      <p>Copyright 2020. REAL__YEY. All rights reserved.</p>
     </div>
 
   </body>
