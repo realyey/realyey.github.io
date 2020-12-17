@@ -1,124 +1,366 @@
 <!DOCTYPE html><!--22061131_황예진-->
 <html lang="en" dir="ltr">
   <head>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <meta charset="utf-8">
+    <title>슬기로운 보물, 예진</title>
 
     <style>
 
     * {
-      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      font-family: arial;
-      padding: 10px;
-      background: #f1f1f1;
+      background-image: url(./img/0_bg.png);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: 'Noto Sans KR', sans-serif;
       line-height: 180%;
+      color: #333;
     }
 
-    a {
-      color: #000000;
-      text-decoration: none;
-    }
-
-    /* Header/Blog title */
     .header {
-      padding: 30px;
-      text-align: center;
-      background: white;
+      width: 100%;
+      height: 75px;
+      background-color: #fff;
+      position: fixed;
+      box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
     }
 
-    .header h1 {
-      font-size: 50px;
-    }
-
-    /* Style the top navigation bar */
     .topnav {
-      overflow: hidden; /* visible,scroll,auto; */
-      background-color: #333;
+      margin: auto;
+      width: 60%;
+      text-align: left;
+      overflow: hidden;
     }
 
-    /* Create two unequal columns that floats next to each other */
-    /* Style the topnav Links */
     .topnav a {
+      color: #333;
+      text-decoration: none;
       float: left;
       display: block;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
+      padding: 20px 30px 0 0;
     }
 
-    /* Change color on hover */
     .topnav a:hover {
-      background-color: #ddd;
-      color: black;
+      color: #aa9ce2;
     }
 
-    /* Left column */
-    .leftcolumn {
+    .main {
+      font-size: 20px;
+      font-weight: bold;
+      color: #aa9ce2;
+    }
+
+    .contents {
+      text-align: left;
+    }
+
+    .contents h2 {
+      font-size: 24px;
+      animation: fadein 2s;
+      -moz-animation: fadein 2s; /* Firefox */
+      -webkit-animation: fadein 2s; /* Safari and Chrome */
+      -o-animation: fadein 2s; /* Opera */
+    }
+
+    .contents h3 {
+      font-size: 18px;
+    }
+
+    .contents h4 {
+      font-size: 14px;
+    }
+    .contents h5 {
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 130%;
+    }
+
+    .row {
+      margin: auto;
+      width: 60%;
+      height: 100%;
+      text-align: left;
+    }
+
+    .conintro {
+      padding-top: 75px;
+      height: 500px;
+    }
+
+    .conintro h1 {
+      font-size: 36px;
+      line-height: 130%;
+    }
+
+    .introleft {
       float: left;
-      width: 25%;
+      width: 50%;
+      margin-top: 150px;
+      animation: fadepoin 2s;
+      -moz-animation: fadepoin 2s; /* Firefox */
+      -webkit-animation: fadepoin 2s; /* Safari and Chrome */
+      -o-animation: fadepoin 2s; /* Opera */
     }
 
-    /* Right column */
-    .rightcolumn {
-      float: left;
-      width: 75%;
-      background-color: #f1f1f1;
-      padding-left: 20px;
+    .introright {
+      float: right;
+      width: 45%;
+      text-align: right;
     }
 
-    img {
+    .introright img {
+      max-width: 100%;
+      margin-top: 100px;
+      animation: fadepoin 2s;
+      -moz-animation: fadepoin 2s; /* Firefox */
+      -webkit-animation: fadepoin 2s; /* Safari and Chrome */
+      -o-animation: fadepoin 2s; /* Opera */
+    }
+
+    .introduce {
+      padding: 50px 0 40px 0;
+      background-color: #fff;
+      color: #000;
+    }
+
+    .introduce p {
+      margin-bottom: 10px;
+      animation: fadepoin 2s;
+      -moz-animation: fadepoin 2s; /* Firefox */
+      -webkit-animation: fadepoin 2s; /* Safari and Chrome */
+      -o-animation: fadepoin 2s; /* Opera */
+    }
+
+    .conskill {
+      padding: 50px 0;
+      background-color: rgba(255,255,255,0.7);
+    }
+
+    .skillcard {
       width: 100%;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      animation: fadein 2s;
+      -moz-animation: fadein 2s; /* Firefox */
+      -webkit-animation: fadein 2s; /* Safari and Chrome */
+      -o-animation: fadein 2s; /* Opera */
     }
 
-    /* Add a card effect for articles */
+    .flex {
+      display: flex;
+    }
+
     .card {
-      background-color: white;
-      padding: 20px;
-      margin-top: 20px;
+      width: 100%;
+      margin: 0 10px;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
+      text-align: center;
     }
 
     .card img {
-      width: 200px;
+      margin: 20px 0 10px 0;
+      width: 60%;
     }
 
-    .card li {
-      list-style-type: decimal;
-      line-height: 180%;
+    .card p {
+      font-size: 14px;
+      line-height: 150%;
+      margin: 10px 0 20px 0;
     }
 
-    /* Clear floats after the columns : 컬럼 다음에 float 해제 */
-    .row:after { /* before */
-      content:""; /* .row 다음에 contect "" 안에 있는 내용을 입력하시오. */
-      display: table;
-      clear: both;
+    .coninfo {
+      padding: 70px 0;
+      animation: fadein 2s;
+      -moz-animation: fadein 2s; /* Firefox */
+      -webkit-animation: fadein 2s; /* Safari and Chrome */
+      -o-animation: fadein 2s; /* Opera */
+    }
+
+    .coninfo img {
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    .infoleft {
+      float: left;
+      width: 47%;
+    }
+
+    .inforight {
+      float: right;
+      width: 47%;
     }
 
     .footer {
-      padding: 20px;
-      text-align: center;
-      background: #333;
-      color: #fff;
-      margin-top: 20px;
+      background-color: #e3daf8;
+      padding: 50px 0;
     }
 
-    /* Responsive Layout - when the screen is less than 800px wide,
-    make the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 800px) {
-      .leftcolumn, .rightcolumn {
-        width: 100%;
-        padding: 0%;
+    .fleft {
+      float: left;
+      width: 49%;
+    }
+
+    .fright {
+      float: right;
+      width: 49%;
+      text-align: right;
+    }
+
+    .footer img {
+      margin-left: 10px;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    @keyframes fadein {
+      from {
+          opacity:0;
+      }
+      to {
+          opacity:1;
+      }
+  }
+
+    @-moz-keyframes fadein { /* Firefox */
+      from {
+          opacity:0;
+      }
+      to {
+          opacity:1;
       }
     }
 
-    /* Responsive Layout - when the screen is less than 400px wide,
-    make the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 400px) {
-      .topnav a {
-        float: none;
+    @-webkit-keyframes fadein { /* Safari and Chrome */
+      from {
+          opacity:0;
+      }
+      to {
+          opacity:1;
+      }
+    }
+
+    @-o-keyframes fadein { /* Opera */
+      from {
+          opacity:0;
+      }
+      to {
+          opacity:1;
+      }
+    }
+
+    @keyframes fadepoin {
+      from {
+          opacity:0;
+          transform:translate(0px, 15px);
+      }
+      to {
+          opacity:1;
+          transform:translate(0px, 0px);
+      }
+  }
+
+    @-moz-keyframes fadepoin { /* Firefox */
+        from {
+          opacity:0;
+          transform:translate(0px, 15px);
+        }
+        to {
+          opacity:1;
+          transform:translate(0px, 0px);
+        }
+    }
+
+    @-webkit-keyframes fadepoin { /* Safari and Chrome */
+      from {
+          opacity:0;
+          transform:translate(0px, 15px);
+      }
+      to {
+          opacity:1;
+          transform:translate(0px, 0px);
+      }
+    }
+
+    @-o-keyframes fadepoin { /* Opera */
+      from {
+          opacity:0;
+          transform:translate(0px, 15px);
+      }
+      to {
+          opacity:1;
+          transform:translate(0px, 0px);
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      .row, .topnav {
+        width: 80%;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .contents h3 {
+        font-size: 15px;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      .infoleft {
         width: 100%;
+        margin-bottom: 75px;
+      }
+
+      .inforight {
+        width: 100%;
+      }
+
+      .flex {
+        width: 100%;
+        display: inline;
+      }
+
+      .card {
+        width: 40%;
+        float: left;
+        margin: 0 4% 4% 0;
+      }
+
+      .contents h1 {
+        font-size: 26px;
+      }
+
+      .topnav a {
+        padding: 20px 15px 0 0;
+      }
+
+    }
+
+      @media screen and (max-width: 500px) {
+        .main {
+          font-size: 18px;
+        }
+
+        .topnav {
+          font-size: 14px;
+        }
+
+        .topnav a {
+          padding: 20px 15px 0 0;
+        }
+
+        .contents h1 {
+          font-size: 21px;
+        }
       }
     }
 
@@ -128,63 +370,137 @@
   <body>
 
     <div class="header">
-    <a href="#"><h1>REAL_YEY</h1></a>
+      <div class="topnav">
+        <a href="#"><span class="main">슬기로운 보물, 예진</span></a>
+        <a href="./page1_1.html">기획</a>
+        <a href="./page2_1.html">디자인</a>
+        <a href="./page3_1.html">프로그래밍</a>
+      </div>
     </div>
 
-    <div class="topnav">
-      <a href="../index2.html">기획</a>
-      <a href="../index3.html">디자인</a>
-      <a href="../last/page1.html" style="float:right;">프로그래밍</a>
-    </div>
+    <div class="contents">
 
-    <div class="row">
 
-      <div class="leftcolumn">
-        <div class="card">
-          <h2>PROFILE</h2>
-          <h5>Born on Oct 8, 1998</h5>
-          <img src="../img/1_profile.png" style="width:100%;">
-          <p>황예진, 23세</p>
-          <p>계원예술대학교 디지털미디어디자인과 1학년에 재학 중이며, 2학년 세부 전공으로는 디자인을 선택했다. 현재 인천에서 거주하고 있다.</p>
-        </div>
-        <div class="card">
-          <h2>HOBBY</h2>
-          <h5>Music / Book / etc..</h5>
-          <ul>
-            <li>음악 감상<br>다양한 장르의 음악을 듣는 것을 좋아한다</li>
-            <li>독서<br>책을 통해 상상력을 넓히는 과정을 즐긴다</li>
-            <li>영화 감상 / 산책 등</li>
-          </ul>
+      <div class="conintro">
+        <div class="row">
+
+          <div class="introleft">
+            슬기 <b>예</b> 보배 <b>진</b>
+            <h1>슬기로운, 보석같은<br>
+            디자이너 예진</h1>
+          </div>
+
+          <div class="introright">
+            <img src="./img/0_profile.png">
+          </div>
+
+          <div class="clear">
+          </div>
+
         </div>
       </div>
 
-      <div class="rightcolumn">
-        <div class="card">
-          <h2>REAL_YEY?</h2>
-          <p><i><b>진짜</b>가 나타났다!</i> 의 그 진짜가 될, 디자이너 황예진</p>
-          <p>한자로 참 진(眞)을 사용하는 것은 아니지만, 말하고자 하는 바가 같아 REAL_YEY를 모토로 사용하고 있다.<br>
-          YE가 아니라 YEY인 이유는...... YEY가 조금 더 신나 보이니까?</p>
-          <p>실제 이름의 한자는 슬기 예(睿) 보배 진(珍)이다. 슬기로운 보배.</p>
+      <div class="introduce">
+        <div class="row">
+          <p>안녕하세요! 디자이너 황예진입니다.</p>
+          <p>그동안 진행했던 작업물을 정리하는 포트폴리오 웹 사이트, <b>슬기로운 예진</b>을 제작했습니다.<br>
+          아직은 부족한 점이 많지만, 꾸준히 노력하고 성장해 갈 모습을 지켜봐 주세요.</p>
+          <p>감사합니다!</p>
         </div>
-        <div class="card">
-          <h2>POPULAR POST</h2>
-          <a href="../index2.html"><img src="./img/1_2.png"></a>
-          <a href="../index3.html"><img src="./img/1_3.png"></a>
-          <a href="../last/page1.html"><img src="./img/1_4.png"></a>
+
+        <div class="clear">
         </div>
-        <div class="card">
-          <h2>CONTACT</h2>
-          <p>E-mail: y900105o@naver.com<br>
-          Phone: 010-6812-1016<br>
-          Instagram: @real__yey</p>
+
+      </div>
+
+      <div class="conskill">
+        <div class="row">
+          <h2>능력치</h2>
+
+          <div class="skillcard">
+            <div class="flex">
+
+              <div class="card">
+                <img src="./img/0_skill_1.png">
+                <h3>일러스트</h3>
+                <p>드로잉보단<br>꼼꼼함으로</p>
+              </div>
+
+              <div class="card">
+                <img src="./img/0_skill_2.png">
+                <h3>포토샵</h3>
+                <p>집요함이 만든<br>자연스러움</p>
+              </div>
+
+              <div class="card">
+                <img src="./img/0_skill_3.png">
+                <h3>프리미어</h3>
+                <p>컷 타이밍은<br>바로 여기</p>
+              </div>
+
+              <div class="card">
+                <img src="./img/0_skill_4.png">
+                <h3>애프터이펙트</h3>
+                <p>모션이<br>재밌어요</p>
+              </div>
+
+              <div class="card">
+                <img src="./img/0_skill_5.png">
+                <h3>파워포인트</h3>
+                <p>기본 중의<br>가장 기본</p>
+              </div>
+
+              <div class="clear">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="coninfo">
+        <div class="row">
+
+          <div class="infoleft">
+            <h2>프로필</h2>
+            <img src="./img/0_info_1.png">
+          </div>
+
+          <div class="inforight">
+            <h2>이력</h2>
+            <img src="./img/0_info_2.png">
+          </div>
+
+          <div class="clear">
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="row">
+
+          <div class="fleft">
+            <h4>슬기로운 보물, 예진</h4>
+            <h5><br>Kaywon University or Art & Design<br>
+            Copyright 2020. Yejin Hwang. All rights reserved.</h5>
+          </div>
+
+          <div class="fright">
+            <a href="mailto:y900105o@naver.com"><img src="./img/0_footer1.png"></a>
+            <a href="https://www.instagram.com/real._.yey_design/" target="_blank"><img src="./img/0_footer2.png"></a>
+            <a href="https://www.youtube.com/channel/UClGlDKpPf_vXAyuQ7TQB9IA" target="_blank"><img src="./img/0_footer3.png"></a>
+          </div>
+
+          <div class="clear">
+          </div>
+
         </div>
       </div>
 
     </div>
 
-    <div class="footer">
-      <p>Copyright 2020. REAL__YEY. All rights reserved.</p>
-    </div>
+
 
   </body>
 </html>
